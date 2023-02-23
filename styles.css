@@ -1,0 +1,144 @@
+/* Create by Tivotal */
+
+/* Google Fonts(Poppins) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "POppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #dad3f8;
+}
+
+.container {
+  max-width: 950px;
+  width: 100%;
+  padding: 40px 50px 40px 40px;
+  background-color: #fff;
+  margin: 0 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container .heading {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.container .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+input {
+  display: none;
+}
+
+.content .list {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin-right: 50px;
+  position: relative;
+}
+
+.content .list label {
+  height: 60px;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 60px;
+  cursor: pointer;
+  padding-left: 25px;
+  transition: all 0.5s ease;
+  color: #333;
+  z-index: 12;
+  white-space: nowrap;
+}
+
+.slider {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 60px;
+  width: 100%;
+  border-radius: 12px;
+  background-color: #6d50e2;
+  transition: all 0.4s ease;
+}
+
+#home:checked ~ .list .slider {
+  top: 0;
+}
+
+#chat:checked ~ .list .slider {
+  top: 60px;
+}
+
+#user:checked ~ .list .slider {
+  top: 120px;
+}
+
+#info:checked ~ .list .slider {
+  top: 180px;
+}
+
+#settings:checked ~ .list .slider {
+  top: 240px;
+}
+
+#home:checked ~ .list label.home,
+#chat:checked ~ .list label.chat,
+#user:checked ~ .list label.user,
+#info:checked ~ .list label.info,
+#settings:checked ~ .list label.settings {
+  color: #fff;
+}
+
+.content .text-content {
+  width: 80%;
+  height: 100%;
+}
+
+.content .text-content .title {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.content .text-content p {
+  text-align: justify;
+}
+
+.content .text-content .text {
+  display: none;
+}
+
+.content .text-content .text.home {
+  display: block;
+}
+
+#home:checked ~ .text-content .home,
+#chat:checked ~ .text-content .chat,
+#user:checked ~ .text-content .user,
+#info:checked ~ .text-content .info,
+#settings:checked ~ .text-content .settings {
+  display: block;
+}
+
+#chat:checked ~ .text-content .home,
+#user:checked ~ .text-content .home,
+#info:checked ~ .text-content .home,
+#settings:checked ~ .text-content .home {
+  display: none;
+}
